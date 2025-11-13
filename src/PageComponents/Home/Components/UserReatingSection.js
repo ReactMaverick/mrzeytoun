@@ -44,9 +44,9 @@ export default function UserReatingSection() {
     // Update items per view based on screen size
     useEffect(() => {
         const handleResize = () => {
-            if (window.innerWidth < 768) {
+            if (typeof window !== 'undefined' && window.innerWidth < 768) {
                 setItemsPerView(1);
-            } else if (window.innerWidth < 1024) {
+            } else if (typeof window !== 'undefined' && window.innerWidth < 1024) {
                 setItemsPerView(2);
             } else {
                 setItemsPerView(3);

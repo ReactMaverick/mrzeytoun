@@ -5,15 +5,20 @@ import { Icon } from '@iconify/react';
 
 export default function PromiseSection() {
     const backGroundRef = useRef();
+    const imageRef = useRef();
 
     const [currentWidth, setCurrentWidth] = useState(0);
     const [currentHeight, setCurrentHeight] = useState(0);
+    const [imageHeight, setImageHeight] = useState(0);
 
     useEffect(() => {
         if (backGroundRef.current) {
             setCurrentWidth(backGroundRef.current.offsetWidth);
             setCurrentHeight(backGroundRef.current.offsetHeight);
             console.log(backGroundRef.current.offsetHeight, backGroundRef.current.offsetWidth)
+        }
+        if (imageRef.current) {
+            setImageHeight(imageRef.current.offsetHeight);
         }
     }, []);
 
@@ -63,7 +68,7 @@ export default function PromiseSection() {
         <section ref={backGroundRef} className="custom-container relative bg-[#F7F7F7] py-5 sm:py-10 md:py-20">
             <div
                 className='absolute top-0 left-0 w-full h-full bg-black'
-                style={window.innerWidth > 768 ? {
+                style={typeof window !== 'undefined' && window.innerWidth > 768 ? {
                     clipPath: `path("M 0 0 L ${(currentWidth / 100) * 80} 0 L ${(currentWidth / 100) * 30} ${currentHeight} L 0 ${currentHeight} Z")`,
                 } :
                     {
@@ -105,14 +110,17 @@ export default function PromiseSection() {
                             <div className="relative w-64 h-64 md:w-80 md:h-80">
                                 {/* Outer Dashed Circle - Black */}
                                 <div className="-z hidden md:block absolute top-[50%] left-[50%] transform -translate-x-1/2 -translate-y-1/2 h-[130%] w-[130%] rounded-full border-2 border-dashed border-gray-400"></div>
-
-                                {/* Inner Dashed Circle - White */}
-                                {/* <div className="absolute inset-0 rounded-full border-2 border-dashed border-white/20 scale-75 animate-[spin_15s_linear_infinite_reverse]"></div> */}
-
+                                <div
+                                    className="-z absolute top-[50%] left-[50%] transform -translate-x-1/2 -translate-y-1/2 rounded-full border-2 border-dashed border-gray-400"
+                                    style={{
+                                        height: imageHeight + (typeof window !== 'undefined' && window.innerWidth > 768 ? 30 : 20),
+                                        width: imageHeight + (typeof window !== 'undefined' && window.innerWidth > 768 ? 30 : 20)
+                                    }} />
                                 {/* Product Image */}
                                 <div className="absolute inset-0 flex items-center justify-center">
                                     <div className="relative w-48 h-48 md:w-56 md:h-56">
                                         <Image
+                                            ref={imageRef}
                                             src="/images/hero-section.png"
                                             alt="Mr Zeytoun Product"
                                             fill
@@ -145,9 +153,6 @@ export default function PromiseSection() {
                             ))}
                         </div>
                     </div>
-
-                    {/* Diagonal Split Background Effect */}
-                    <div className="absolute top-0 right-0 w-1/3 h-full bg-linear-to-l from-gray-100 to-transparent opacity-10 pointer-events-none hidden lg:block skew-x-[-15deg] translate-x-1/4"></div>
                 </div>
             </div>
         </section>
