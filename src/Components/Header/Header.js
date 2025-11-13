@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Icon } from '@iconify/react';
@@ -8,6 +8,20 @@ import { LOGO } from '@/Constant/image';
 
 export default function Header() {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+    const [isScrolled, setIsScrolled] = useState(false);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            if (window.scrollY > 10) {
+                setIsScrolled(true);
+            } else {
+                setIsScrolled(false);
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
 
     const toggleMobileMenu = () => {
         setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -20,7 +34,7 @@ export default function Header() {
     ];
 
     return (
-        <header className="bg-white md:bg-transparent fixed w-full z-50">
+        <header className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-white shadow-md' : 'bg-white md:bg-transparent'}`}>
             <div className="custom-container mx-auto px-4">
                 <div className="flex items-center justify-between py-4">
                     {/* Logo */}
@@ -55,24 +69,24 @@ export default function Header() {
                         <div className="hidden md:flex items-center space-x-4">
                             <Link
                                 href="/contact"
-                                className="px-4 py-2 bg-white text-gray-700 border border-gray-300 rounded-full hover:bg-gray-50 transition-colors duration-200 text-sm font-medium"
+                                className={`px-4 py-2 border rounded-full transition-colors duration-200 text-sm font-medium ${isScrolled ? 'bg-white text-gray-700 border-gray-300 hover:bg-gray-50' : 'bg-white text-gray-700 border-gray-300 hover:bg-gray-50'}`}
                             >
                                 Contact Us
                             </Link>
                             <Link
                                 href="/login"
-                                className="px-4 py-2 border border-white bg-transparent text-white rounded-full hover:bg-gray-800 transition-colors duration-200 text-sm font-medium"
+                                className={`px-4 py-2 border rounded-full transition-colors duration-200 text-sm font-medium ${isScrolled ? 'border-black bg-black text-white hover:bg-gray-800' : 'border-white bg-transparent text-white hover:bg-white/10'}`}
                             >
                                 Login
                             </Link>
                             <button
-                                className="p-2 text-white cursor-pointer"
+                                className={`p-2 cursor-pointer transition-colors duration-200 ${isScrolled ? 'text-gray-700' : 'text-white'}`}
                                 aria-label="Search"
                             >
                                 <Icon icon="mdi:magnify" className="w-5 h-5" />
                             </button>
                             <button
-                                className="p-2 text-white cursor-pointer"
+                                className={`p-2 cursor-pointer transition-colors duration-200 ${isScrolled ? 'text-gray-700' : 'text-white'}`}
                                 aria-label="Cart"
                             >
                                 <Icon icon="mdi:cart-outline" className="w-5 h-5" />
