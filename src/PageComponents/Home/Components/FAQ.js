@@ -10,7 +10,7 @@ const FAQ = () => {
         </h2>
 
         {/* Faqs  */}
-          <Accordion />
+        <Accordion />
       </div>
     </section>
   );
