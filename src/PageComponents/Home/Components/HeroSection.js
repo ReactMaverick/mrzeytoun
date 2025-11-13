@@ -17,7 +17,7 @@ export default function HeroSection() {
   return (
     <div className="pt-[30%] sm:pt-[20%] md:pt-[10%] flex md:flex-row flex-col custom-container pb-5 sm:pb-10 md:pb-20">
       <div className="w-full md:w-6/10 flex flex-col gap-3 order-2 md:order-1">
-        <h2 className="font-varsity text-primary">
+        <h2 className="font-varsity text-primary py-10 md:py-0">
           MR ZEYTOUN HIGH PERFORMANCE MATTE CLAY
         </h2>
         <span className="flex items-center font-medium flex-wrap">
@@ -55,6 +55,8 @@ export default function HeroSection() {
             alt="hero section image"
           />
           <div className="absolute -top-[5%] -left-[5%] h-[110%] w-[110%] rounded-full border-2 border-dashed border-gray-400" />
+                    <span className='absolute px-3 py-1 rounded-full bg-white border border-gray-500 font-medium'>Non-greasy</span>
+                    <span className='absolute px-3 py-1 rounded-full bg-white font-medium top-0 -right-[13%]'>Matte Clay</span>
         </div>
       </div>
     </div>

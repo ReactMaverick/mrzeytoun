@@ -49,7 +49,7 @@ export default function ProductDetailsSection() {
         <section ref={backGroundRef} className="custom-container relative bg-white py-5 sm:py-10 md:py-20">
             <div
                 className='absolute top-0 left-0 w-full h-full bg-black'
-                style={window.innerWidth > 768 ? {
+                style={typeof window !== 'undefined' && window.innerWidth > 768 ? {
                     clipPath: `path("M 0 0 L ${(currentWidth / 100) * 30} 0 L ${(currentWidth / 100) * 30} ${currentHeight} L 0 ${currentHeight} Z")`,
                 } :
                     {
