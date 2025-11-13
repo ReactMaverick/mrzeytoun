@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Icon } from '@iconify/react';
+import { LOGO } from '@/Constant/image';
 
 export default function Header() {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -26,7 +27,7 @@ export default function Header() {
                     <div className="shrink-0">
                         <Link href="/">
                             <Image
-                                src="/images/10002 (1) 1.png"
+                                src={LOGO}
                                 alt="Logo"
                                 width={60}
                                 height={60}

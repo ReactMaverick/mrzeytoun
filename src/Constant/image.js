@@ -1,3 +1,9 @@
 export const HERO_BACKGROUND_LAYER = "/images/hero-background-layer.png";
 export const HERO_BACKGROUND = "/images/hero-banner-background.png";
 export const HERO_SECTION_IMAGE = "/images/hero-section.png";
+export const LOGO = "/images/logo.png";
+export const INSTAGRAM_ICON = "/images/instagram-icon.png";
+export const FACEBOOK_ICON = "/images/facebook-icon.png";
+export const X_ICON = "/images/x-icon.png";
+export const YOUTUBE_ICON = "/images/youtube-icon.png";
+export const TIKTOK_ICON = "/images/tiktok-icon.png";

@@ -2,6 +2,7 @@ import React from 'react'
 import HeroSection from './Components/HeroSection'
 import { HERO_BACKGROUND, HERO_BACKGROUND_LAYER } from '@/Constant/image'
 import PromiseSection from './Components/PromiseSection'
+import FAQ from './Components/FAQ'
 
 export default function Home() {
     return (
@@ -13,6 +14,7 @@ export default function Home() {
                 <HeroSection />
             </section>
             <PromiseSection />
+            <FAQ />
         </>
     )
 }
