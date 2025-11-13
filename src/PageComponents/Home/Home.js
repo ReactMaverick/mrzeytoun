@@ -3,6 +3,10 @@ import HeroSection from './Components/HeroSection'
 import { HERO_BACKGROUND, HERO_BACKGROUND_LAYER } from '@/Constant/image'
 import PromiseSection from './Components/PromiseSection'
 import FAQ from './Components/FAQ'
+import ProductDetailsSection from './Components/ProductDetailsSection'
+import InstrectionSection from './Components/InstrectionSection'
+import UserReatingSection from './Components/UserReatingSection'
+import FooterBanner from './Components/FooterBanner'
 
 export default function Home() {
     return (
@@ -14,7 +18,11 @@ export default function Home() {
                 <HeroSection />
             </section>
             <PromiseSection />
+            <ProductDetailsSection />
+            <InstrectionSection />
+            <UserReatingSection />
             <FAQ />
+            <FooterBanner />
         </>
     )
 }

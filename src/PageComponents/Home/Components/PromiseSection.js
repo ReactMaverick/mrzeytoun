@@ -13,6 +13,7 @@ export default function PromiseSection() {
         if (backGroundRef.current) {
             setCurrentWidth(backGroundRef.current.offsetWidth);
             setCurrentHeight(backGroundRef.current.offsetHeight);
+            console.log(backGroundRef.current.offsetHeight, backGroundRef.current.offsetWidth)
         }
     }, []);
 
@@ -59,33 +60,40 @@ export default function PromiseSection() {
     const rightFeatures = features.filter((f) => f.position === 'right');
 
     return (
-        <section className="custom-container relative bg-[#F7F7F7]">
+        <section ref={backGroundRef} className="custom-container relative bg-[#F7F7F7] py-5 sm:py-10 md:py-20">
             <div
                 className='absolute top-0 left-0 w-full h-full bg-black'
-                style={{
-                    clipPath: `path("M 0 0 L ${(currentWidth / 100) * 80} 0 L 100 100 L 0 100")`,
-                }}
+                style={window.innerWidth > 768 ? {
+                    clipPath: `path("M 0 0 L ${(currentWidth / 100) * 80} 0 L ${(currentWidth / 100) * 30} ${currentHeight} L 0 ${currentHeight} Z")`,
+                } :
+                    {
+                        clipPath: `path("M 0 0 L ${currentWidth} 0 L ${currentWidth} ${(currentHeight / 100) * 60} L 0 ${(currentHeight / 100) * 60} Z")`,
+                    }
+                }
             />
-            <div className="custom-container">
+            <div className="">
                 {/* Title */}
-                <div ref={backGroundRef} className="text-center mb-16">
-                    <h2 className="text-white uppercase tracking-wider">Why Choose Mr Zeytoun</h2>
-                </div>
+                <h2 className="text-white uppercase font-varsity relative z-3 text-left pb-5 sm:pb-10 md:pb-20">Why Choose Mr Zeytoun</h2>
 
                 {/* Main Content */}
                 <div className="relative">
-                    <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12 items-center">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12 items-center">
                         {/* Left Features */}
-                        <div className="space-y-8 order-2 lg:order-1">
-                            {leftFeatures.map((feature) => (
+                        <div className="space-y-5 md:space-y-25 z-2">
+                            {leftFeatures.map((feature, index) => (
                                 <div
+                                    style={index !== 1 && window.innerWidth > 768 ?
+                                        {
+                                            transform: 'translateX(10%)'
+                                        } : {}
+                                    }
                                     key={feature.id}
-                                    className="flex items-center gap-4 justify-start lg:justify-end"
+                                    className="flex relative text-white items-center gap-4 justify-start lg:justify-end "
                                 >
-                                    <div className="flex-1 lg:text-right order-2 lg:order-1">
-                                        <p className="text-sm md:text-base">{feature.title}</p>
+                                    <div className="flex-1 border border-gray-300 p-3 rounded-full">
+                                        <p className="text-sm md:text-base pr-4">{feature.title}</p>
                                     </div>
-                                    <div className="shrink-0 w-10 h-10 rounded-full bg-white flex items-center justify-center order-1 lg:order-2">
+                                    <div className="duble-border shrink-0 absolute -right-4 h-12 w-12 aspect-square rounded-full bg-white flex items-center justify-center">
                                         <Icon icon={feature.icon} className="w-5 h-5 text-black" />
                                     </div>
                                 </div>
@@ -93,13 +101,13 @@ export default function PromiseSection() {
                         </div>
 
                         {/* Center Image with Dashed Circles */}
-                        <div className="relative flex items-center justify-center order-1 lg:order-2">
+                        <div className="relative flex items-center justify-center">
                             <div className="relative w-64 h-64 md:w-80 md:h-80">
                                 {/* Outer Dashed Circle - Black */}
-                                <div className="absolute inset-0 rounded-full border-2 border-dashed border-white/30 animate-[spin_20s_linear_infinite]"></div>
+                                <div className="-z hidden md:block absolute top-[50%] left-[50%] transform -translate-x-1/2 -translate-y-1/2 h-[130%] w-[130%] rounded-full border-2 border-dashed border-gray-400"></div>
 
                                 {/* Inner Dashed Circle - White */}
-                                <div className="absolute inset-0 rounded-full border-2 border-dashed border-white/20 scale-75 animate-[spin_15s_linear_infinite_reverse]"></div>
+                                {/* <div className="absolute inset-0 rounded-full border-2 border-dashed border-white/20 scale-75 animate-[spin_15s_linear_infinite_reverse]"></div> */}
 
                                 {/* Product Image */}
                                 <div className="absolute inset-0 flex items-center justify-center">
@@ -116,17 +124,22 @@ export default function PromiseSection() {
                         </div>
 
                         {/* Right Features */}
-                        <div className="space-y-8 order-3">
-                            {rightFeatures.map((feature) => (
+                        <div className="space-y-5 md:space-y-25 order-3">
+                            {rightFeatures.map((feature, index) => (
                                 <div
+                                    style={index !== 1 && window.innerWidth > 768 ?
+                                        {
+                                            transform: 'translateX(-10%)'
+                                        } : {}
+                                    }
                                     key={feature.id}
-                                    className="flex items-center gap-4 justify-start"
+                                    className="flex relative text-white items-center gap-4 justify-start "
                                 >
-                                    <div className="shrink-0 w-10 h-10 rounded-full bg-white flex items-center justify-center">
+                                    <div className="border-5 border-white absolute -left-4 h-12 w-12 aspect-square rounded-full bg-gray-300 flex items-center justify-center">
                                         <Icon icon={feature.icon} className="w-5 h-5 text-black" />
                                     </div>
-                                    <div className="flex-1">
-                                        <p className="text-sm md:text-base">{feature.title}</p>
+                                    <div className="flex-1 bg-black p-3 rounded-full">
+                                        <p className="text-sm md:text-base pl-6">{feature.title}</p>
                                     </div>
                                 </div>
                             ))}

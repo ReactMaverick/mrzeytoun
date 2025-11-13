@@ -58,6 +58,11 @@ body {
   .custom-container {
     @apply max-w-[1600px] mx-auto lg:px-20 md:px-10 px-5;
   }
+
+  .duble-border {
+    border: 6px solid black; /* inner border */
+    box-shadow: 0 0 0 1px rgb(255, 255, 255); /* outer border */
+  }
 }
 
 .heroImage {
