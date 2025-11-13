@@ -135,7 +135,7 @@ export default function PromiseSection() {
                         <div className="space-y-5 md:space-y-25 order-3">
                             {rightFeatures.map((feature, index) => (
                                 <div
-                                    style={index !== 1 && window.innerWidth > 768 ?
+                                    style={index !== 1 && typeof window !== 'undefined' && window.innerWidth > 768 ?
                                         {
                                             transform: 'translateX(-10%)'
                                         } : {}
