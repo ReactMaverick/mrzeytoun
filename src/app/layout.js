@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import Header from "@/Components/Header/Header";
 import Footer from "@/Components/Footer/Footer";
+import AOSInitializer from "@/Components/AOSInitializer/AOSInitializer";
 
 const outFit = Outfit({
   subsets: ["latin"],
@@ -16,7 +17,6 @@ const varsityTeam = localFont({
   variable: "--varsity-team",
 });
 
-
 export const metadata = {
   title: "ZEYTOUN",
   description: "MR ZEYTOUN HIGH PERFORMANCE MATTE CLAY",
@@ -28,6 +28,7 @@ export default function RootLayout({ children }) {
       <body
         className={`${outFit.variable} ${varsityTeam.variable} antialiased`}
       >
+        <AOSInitializer />
         <Header />
         {children}
         <Footer />
