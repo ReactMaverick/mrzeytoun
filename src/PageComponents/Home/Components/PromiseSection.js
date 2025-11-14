@@ -10,6 +10,8 @@ export default function PromiseSection() {
     const [currentWidth, setCurrentWidth] = useState(0);
     const [currentHeight, setCurrentHeight] = useState(0);
     const [imageHeight, setImageHeight] = useState(0);
+    const [isWide, setIsWide] = useState(false);
+
 
     useEffect(() => {
         if (backGroundRef.current) {
@@ -19,6 +21,9 @@ export default function PromiseSection() {
         }
         if (imageRef.current) {
             setImageHeight(imageRef.current.offsetHeight);
+        }
+        if (window.innerWidth > 768) {
+            setIsWide(true);
         }
     }, []);
 
@@ -68,7 +73,7 @@ export default function PromiseSection() {
         <section ref={backGroundRef} className="custom-container relative bg-[#F7F7F7] py-5 sm:py-10 md:py-20">
             <div
                 className='absolute top-0 left-0 w-full h-full bg-black'
-                style={typeof window !== 'undefined' && window.innerWidth > 768 ? {
+                style={isWide && window.innerWidth > 768 ? {
                     clipPath: `path("M 0 0 L ${(currentWidth / 100) * 80} 0 L ${(currentWidth / 100) * 30} ${currentHeight} L 0 ${currentHeight} Z")`,
                 } :
                     {
@@ -87,7 +92,7 @@ export default function PromiseSection() {
                         <div className="space-y-5 md:space-y-25 z-2">
                             {leftFeatures.map((feature, index) => (
                                 <div
-                                    style={index !== 1 && typeof window !== 'undefined' && window.innerWidth > 768 ?
+                                    style={index !== 1 && isWide && window.innerWidth > 768 ?
                                         {
                                             transform: 'translateX(10%)'
                                         } : {}
@@ -113,8 +118,8 @@ export default function PromiseSection() {
                                 <div
                                     className="-z absolute top-[50%] left-[50%] transform -translate-x-1/2 -translate-y-1/2 rounded-full border-2 border-dashed border-gray-400"
                                     style={{
-                                        height: imageHeight + (typeof window !== 'undefined' && window.innerWidth > 768 ? 30 : 20),
-                                        width: imageHeight + (typeof window !== 'undefined' && window.innerWidth > 768 ? 30 : 20)
+                                        height: imageHeight + (isWide && window.innerWidth > 768 ? 30 : 20),
+                                        width: imageHeight + (isWide && window.innerWidth > 768 ? 30 : 20)
                                     }} />
                                 {/* Product Image */}
                                 <div className="absolute inset-0 flex items-center justify-center">
@@ -135,7 +140,7 @@ export default function PromiseSection() {
                         <div className="space-y-5 md:space-y-25 order-3">
                             {rightFeatures.map((feature, index) => (
                                 <div
-                                    style={index !== 1 && typeof window !== 'undefined' && window.innerWidth > 768 ?
+                                    style={index !== 1 && isWide && window.innerWidth > 768 ?
                                         {
                                             transform: 'translateX(-10%)'
                                         } : {}

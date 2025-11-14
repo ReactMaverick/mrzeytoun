@@ -9,6 +9,7 @@ export default function ProductDetailsSection() {
 
     const [currentWidth, setCurrentWidth] = useState(0);
     const [currentHeight, setCurrentHeight] = useState(0);
+    const [isWide, setIsWide] = useState(false);
 
     const ingredients = [
         {
@@ -43,13 +44,16 @@ export default function ProductDetailsSection() {
             setCurrentHeight(backGroundRef.current.offsetHeight);
             // console.log(backGroundRef.current.offsetHeight, backGroundRef.current.offsetWidth)
         }
+        if (window.innerWidth > 768) {
+            setIsWide(true);
+        }
     }, []);
 
     return (
         <section ref={backGroundRef} className="custom-container relative bg-white py-5 sm:py-10 md:py-20">
             <div
                 className='absolute top-0 left-0 w-full h-full bg-black'
-                style={typeof window !== 'undefined' && window.innerWidth > 768 ? {
+                style={isWide && window.innerWidth > 768 ? {
                     clipPath: `path("M 0 0 L ${(currentWidth / 100) * 30} 0 L ${(currentWidth / 100) * 30} ${currentHeight} L 0 ${currentHeight} Z")`,
                 } :
                     {
