@@ -148,7 +148,7 @@ export default function PromiseSection() {
                                     key={feature.id}
                                     className="flex relative text-white items-center gap-4 justify-start "
                                 >
-                                    <div className="border-5 border-white absolute -left-4 h-12 w-12 aspect-square rounded-full bg-gray-300 flex items-center justify-center">
+                                    <div className="border-5 border-[#f7f7f7] absolute -left-4 h-12 w-12 aspect-square rounded-full bg-gray-300 flex items-center justify-center">
                                         <Icon icon={feature.icon} className="w-5 h-5 text-black" />
                                     </div>
                                     <div className="flex-1 bg-black p-3 rounded-full">
