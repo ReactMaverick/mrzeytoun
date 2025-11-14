@@ -11,10 +11,9 @@ import FooterBanner from './Components/FooterBanner'
 export default function Home() {
     return (
         <>
-            <section className='relative overflow-hidden custom-container p-0 '>
-                <img className='absolute -z-1 h-full w-full opacity-20' src={HERO_BACKGROUND_LAYER} alt="background layer" />
-                <img className='absolute -z-1 w-full md:w-auto h-[30%] md:h-full right-0' src={HERO_BACKGROUND} alt="background" />
-
+            <section className='relative overflow-hidden'>
+                <img className='absolute -z-1 lg:w-7/10 xl:h-full xl:w-6/10 lg:h-auto h-full w-full opacity-20' src={HERO_BACKGROUND_LAYER} alt="background layer" />
+                <img className='absolute -z-1 lg:w-3/10 xl:h-auto xl:w-4/10 lg:h-auto h-[30%] w-full md:w-auto md:h-full right-0' src={HERO_BACKGROUND} alt="background" />
                 <HeroSection />
             </section>
             <PromiseSection />

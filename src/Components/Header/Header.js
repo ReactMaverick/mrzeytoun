@@ -34,7 +34,7 @@ export default function Header() {
     ];
 
     return (
-        <header className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-white shadow-md' : 'bg-white md:bg-transparent'}`}>
+        <header className={`fixed w-full z-50 transition-all duration-300 bg-white shadow-md`}>
             <div className="custom-container mx-auto px-4">
                 <div className="flex items-center justify-between py-4">
                     {/* Logo */}
@@ -54,7 +54,7 @@ export default function Header() {
                     {/* Desktop Navigation */}
                     <div className='flex items-center gap-3'>
                         <nav className="hidden md:flex items-center space-x-8">
-                            {navLinks.map((link) => (
+                            {/* {navLinks.map((link) => (
                                 <Link
                                     key={link.name}
                                     href={link.href}
@@ -62,12 +62,12 @@ export default function Header() {
                                 >
                                     {link.name}
                                 </Link>
-                            ))}
+                            ))} */}
                         </nav>
 
                         {/* Desktop Action Buttons */}
                         <div className="hidden md:flex items-center space-x-4">
-                            <Link
+                            {/* <Link
                                 href="/contact"
                                 className={`px-4 py-2 border rounded-full transition-colors duration-200 text-sm font-medium ${isScrolled ? 'bg-white text-gray-700 border-gray-300 hover:bg-gray-50' : 'bg-white text-gray-700 border-gray-300 hover:bg-gray-50'}`}
                             >
@@ -90,7 +90,7 @@ export default function Header() {
                                 aria-label="Cart"
                             >
                                 <Icon icon="mdi:cart-outline" className="w-5 h-5" />
-                            </button>
+                            </button> */}
                         </div>
                     </div>
 
