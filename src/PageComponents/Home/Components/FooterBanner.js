@@ -44,11 +44,11 @@ export default function FooterBanner() {
               >
                 Shop Now
               </button>
-              <button
+              {/* <button
                 className="px-8 py-3 bg-transparent text-white border-2 border-white rounded-full font-semibold text-sm hover:bg-white hover:text-black transition-all duration-300"
               >
                 Learn More
-              </button>
+              </button> */}
             </div>
           </div>
 

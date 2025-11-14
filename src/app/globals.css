@@ -65,6 +65,29 @@ body {
   }
 }
 
+@layer utilities {
+  .masked-text {
+    color: transparent;
+    background-image: url("/images/hero-background-layer.png");
+    background-size: 200%; /* Enlarged for smooth animation */
+    background-position: 0 50%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: animate-background 5s infinite alternate linear;
+    background-color: #171717;
+  }
+
+  @keyframes animate-background {
+    0% {
+      background-position: 0 50%;
+    }
+    100% {
+      background-position: 100% 50%;
+    }
+  }
+}
+
 .heroImage {
   @apply relative;
 }

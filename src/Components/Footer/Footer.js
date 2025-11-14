@@ -41,21 +41,35 @@ const Footer = () => {
   return (
     <footer className="bg-white">
       <div className="custom-container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 pt-8 md:pt-12 lg:pt-[50px] pb-6 lg:pb-[15px]">
-        {/* Contact Details  */}
-        <div className="flex flex-col gap-4 items-start justify-center order-2 md:order-1">
-          {contactDetails.map((contact) => (
-            <div key={contact.type} className="flex items-center gap-2">
-              <Icon
-                icon={contact.icon}
-                width="20"
-                height="20"
-                className="sm:w-6 sm:h-6"
+        {/* Info  */}
+        <div className="flex flex-col items-start md:items-start lg:items-start justify-center gap-4 lg:gap-[20px] order-1 md:col-span-2 lg:col-span-1">
+          <h4 className="font-bold font-varsity text-center md:text-left lg:text-right">
+            MR ZEYTOUN
+          </h4>
+          {/* <div className="flex flex-col sm:flex-row w-full max-w-md lg:max-w-none">
+            <div className="flex border-[1px] border-black rounded-[80px] overflow-hidden w-full">
+              <input
+                type="email"
+                placeholder="Enter your email"
+                className="focus:outline-none text-sm sm:text-base py-3 px-4 lg:px-[20px] flex-1 min-w-0"
               />
-              <span className="text-sm sm:text-base break-words">
-                {contact.value}
-              </span>
+              <button className="flex items-center justify-center bg-black text-white px-4 sm:px-[1.5vw] xl:px-[24px] py-3 xl:py-[12px] rounded-full cursor-pointer hover:scale-105 transition-all duration-300 m-1 whitespace-nowrap">
+                <span className="inline md:inline lg:hidden xl:inline">
+                  Subscribe
+                </span>
+                <Icon
+                  icon="fluent:arrow-up-16-filled"
+                  width="24"
+                  height="24"
+                  className="rotate-45"
+                />
+              </button>
             </div>
-          ))}
+          </div> */}
+          <p className=" text-center md:text-left lg:text-left">
+            Premium grooming essentials crafted with Middle Eastern heritage and
+            modern excellence.
+          </p>
         </div>
 
         {/* Logo & Social Media Icons  */}
@@ -69,7 +83,7 @@ const Footer = () => {
               className="w-full h-full object-contain"
             />
           </div>
-          <div className="w-full flex flex-col lg:flex-row items-start lg:items-center justify-center sm:justify-between py-4 lg:py-[20px] gap-4 sm:gap-6 lg:gap-[30px]">
+          {/* <div className="w-full flex flex-col lg:flex-row items-start lg:items-center justify-center sm:justify-between py-4 lg:py-[20px] gap-4 sm:gap-6 lg:gap-[30px]">
             {menuItems.map((item) => (
               <Link
                 key={item.name}
@@ -79,7 +93,7 @@ const Footer = () => {
                 {item.name}
               </Link>
             ))}
-          </div>
+          </div> */}
           {/* Social Media Icons  */}
           <div className="flex items-center justify-start lg:justify-center gap-4 sm:gap-6 lg:gap-[30px] flex-wrap">
             {socialLinks.map((social) => (
@@ -102,31 +116,21 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Newsletter Subscription  */}
-        <div className="flex flex-col items-start md:items-start lg:items-end justify-center gap-4 lg:gap-[20px] order-3 md:col-span-2 lg:col-span-1">
-          <h4 className="font-bold font-varsity text-center md:text-left lg:text-right text-base sm:text-lg lg:text-xl">
-            SUBSCRIBE TO OUR EMAILS
-          </h4>
-          <div className="flex flex-col sm:flex-row w-full max-w-md lg:max-w-none">
-            <div className="flex border-[1px] border-black rounded-[80px] overflow-hidden w-full">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="focus:outline-none text-sm sm:text-base py-3 px-4 lg:px-[20px] flex-1 min-w-0"
+        {/* Contact Details  */}
+        <div className="flex flex-col gap-4 lg:items-end justify-center order-2 md:order-3">
+          {contactDetails.map((contact) => (
+            <div key={contact.type} className="flex items-center gap-2">
+              <Icon
+                icon={contact.icon}
+                width="20"
+                height="20"
+                className="sm:w-6 sm:h-6"
               />
-              <button className="flex items-center justify-center bg-black text-white px-4 sm:px-[1.5vw] xl:px-[24px] py-3 xl:py-[12px] rounded-full cursor-pointer hover:scale-105 transition-all duration-300 m-1 whitespace-nowrap">
-                <span className="inline md:inline lg:hidden xl:inline">
-                  Subscribe
-                </span>
-                <Icon
-                  icon="fluent:arrow-up-16-filled"
-                  width="24"
-                  height="24"
-                  className="rotate-45"
-                />
-              </button>
+              <span className="text-sm sm:text-base break-words">
+                {contact.value}
+              </span>
             </div>
-          </div>
+          ))}
         </div>
       </div>
 

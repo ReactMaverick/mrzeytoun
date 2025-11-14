@@ -96,7 +96,7 @@ export default function PromiseSection() {
         <div className="">
           {/* Title */}
           <h2
-            data-aos="fade-up"
+            data-aos="fade-down"
             data-aos-duration="500"
             className="text-white uppercase font-varsity relative z-3 text-left pb-5 sm:pb-10 md:pb-20"
           >

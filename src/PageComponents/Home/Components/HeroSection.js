@@ -18,7 +18,7 @@ export default function HeroSection() {
     <div className="relative  custom-container">
       <div className="pt-[30%] sm:pt-[20%] md:pt-[10%] flex md:flex-row flex-col pb-5 sm:pb-10 md:pb-20">
         <div className="w-full md:w-6/10 flex flex-col gap-3 order-2 md:order-1">
-          <h2 className="font-varsity text-primary py-10 md:py-0">
+          <h2 className="masked-text font-varsity text-primary py-10 md:py-0">
             MR ZEYTOUN HIGH PERFORMANCE MATTE CLAY
           </h2>
           <span className="flex items-center font-semibold text-lg md:text-xl flex-wrap">
@@ -40,24 +40,30 @@ export default function HeroSection() {
             >
               Buy Now
             </button>
-            <button
+            {/* <button
               className="rounded-full px-4 py-2 bg-transparent border border-black"
               type="button"
             >
               Learn More
-            </button>
+            </button> */}
           </div>
         </div>
         <div className="w-full md:w-3/10  order-1 md:order-2 flex md:block justify-center">
           <div className="relative w-2/4 md:w-full">
             <img
+              data-aos="zoom-in"
+              data-aos-duration="500"
               className="w-full bg-white p-5 rounded-full"
               src={HERO_SECTION_IMAGE}
               alt="hero section image"
             />
             <div className="absolute -top-[5%] -left-[5%] h-[110%] w-[110%] rounded-full border-2 border-dashed border-gray-400" />
-            <span className='absolute px-3 py-1 rounded-full bg-white border border-gray-500 font-medium'>Non-greasy</span>
-            <span className='absolute px-3 py-1 rounded-full bg-white font-medium top-0 -right-[13%]'>Matte Clay</span>
+            <span className="absolute px-3 py-1 rounded-full bg-white border border-gray-500 font-medium">
+              Non-greasy
+            </span>
+            <span className="absolute px-3 py-1 rounded-full bg-white font-medium top-0 -right-[13%]">
+              Matte Clay
+            </span>
           </div>
         </div>
       </div>

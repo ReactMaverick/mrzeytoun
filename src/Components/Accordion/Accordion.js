@@ -43,6 +43,9 @@ export default function Accordion() {
       {faqs.map((faq, index) => (
         <div
           key={index}
+          data-aos="fade-up"
+          data-aos-duration="500"
+          data-aos-delay={index * 200}
           className="bg-white rounded-xl py-[16px] px-[30px] border-[1px] border-gray-300 flex flex-col justify-center items-stretch space-y-[2rem] h-full"
         >
           {/* Trigger */}
