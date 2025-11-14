@@ -34,7 +34,7 @@ export default function InstrectionSection() {
                 {/* Title */}
                 <div className="text-center mb-4">
                     <h2 className="text-primary uppercase tracking-wider font-bold font-varsity">How To Use</h2>
-                    <p className="text-gray-600 text-md font-light">
+                    <p className="text-gray-600 font-light">
                         The perfect hairstyle doesn't need effort, just the right steps.
                         <br />
                         Here's how to get the best out of your MR ZEYTOUN Matte Clay.
@@ -58,12 +58,12 @@ export default function InstrectionSection() {
                                 </h3>
 
                                 {/* Description */}
-                                <p className="text-center text-xs md:text-sm text-gray-500 max-w-xs">
+                                <p className="text-center font-light text-gray-500 max-w-xs">
                                     {step.description}
                                 </p>
 
                                 {/* Note */}
-                                <p className="text-center text-xs md:text-sm text-gray-500 max-w-xs mt-2">
+                                <p className="text-center font-light text-gray-500 max-w-xs mt-2">
                                     {step.note}
                                 </p>
                             </div>

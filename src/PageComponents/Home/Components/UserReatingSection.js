@@ -106,8 +106,8 @@ export default function UserReatingSection() {
     };
 
     return (
-        <section className="custom-container py-5 sm:py-10 md:py-20 bg-gray-50">
-            <div className="">
+        <section className="bg-gray-50">
+            <div className="custom-container py-5 sm:py-10 md:py-20">
                 {/* Header with Navigation */}
                 <div className="flex items-center justify-between mb-12">
                     <h2 className="text-primary uppercase font-varsity">
