@@ -95,7 +95,7 @@ export default function Header() {
                     </div>
 
                     {/* Mobile Menu Button */}
-                    <button
+                    {/* <button
                         className="md:hidden p-2 text-gray-700 hover:text-gray-900 transition-colors duration-200"
                         onClick={toggleMobileMenu}
                         aria-label="Toggle menu"
@@ -104,11 +104,11 @@ export default function Header() {
                             icon={isMobileMenuOpen ? 'mdi:close' : 'mdi:menu'}
                             className="w-6 h-6"
                         />
-                    </button>
+                    </button> */}
                 </div>
 
                 {/* Mobile Menu */}
-                {isMobileMenuOpen && (
+                {/* {isMobileMenuOpen && (
                     <div className="md:hidden py-4 border-t border-gray-200">
                         <nav className="flex flex-col space-y-4">
                             {navLinks.map((link) => (
@@ -153,7 +153,7 @@ export default function Header() {
                             </div>
                         </nav>
                     </div>
-                )}
+                )} */}
             </div>
         </header>
     );

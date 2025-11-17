@@ -69,7 +69,7 @@ export default function InstrectionSection() {
         </div>
 
         {/* Steps */}
-        <div className="grid grid-cols-1 md:grid-cols-5 justify-between gap-2.5 md:gap-6 mb-12 overflow-hidden">
+        <div className="grid grid-cols-1 md:grid-cols-5 justify-between gap-2.5 md:gap-6 mb-12">
           {steps.map((step, index) => (
             <React.Fragment key={step.id}>
               {/* Step Card */}

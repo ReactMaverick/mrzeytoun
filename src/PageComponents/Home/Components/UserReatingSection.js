@@ -15,7 +15,7 @@ export default function UserReatingSection() {
         "Leaves a natural matte finish, no shine, no stickiness. My hair stays in place all day, and it still feels soft.",
       author: "TONY FADES",
       location: "Sydney, AUS",
-      rating: 4.5,
+      rating: 5,
     },
     {
       id: 2,
@@ -24,7 +24,7 @@ export default function UserReatingSection() {
         "Washes out easily and doesn't build up like other clays. The scent is subtle and classy, just how I like it.",
       author: "TONY FADES",
       location: "Sydney, AUS",
-      rating: 4,
+      rating: 5,
     },
     {
       id: 3,
@@ -33,7 +33,7 @@ export default function UserReatingSection() {
         "Gives that effortless, messy look I love without looking overdone.",
       author: "TONY FADES",
       location: "Sydney, AUS",
-      rating: 4.5,
+      rating: 5,
     },
     {
       id: 4,
@@ -42,7 +42,7 @@ export default function UserReatingSection() {
         "Gives that effortless, messy look I love without looking overdone.",
       author: "TONY FADES",
       location: "Sydney, AUS",
-      rating: 4.5,
+      rating: 5,
     },
   ];
 

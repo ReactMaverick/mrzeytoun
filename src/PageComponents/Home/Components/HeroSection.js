@@ -16,8 +16,12 @@ export default function HeroSection() {
   };
   return (
     <div className="relative  custom-container">
-      <div className="pt-[30%] sm:pt-[20%] md:pt-[10%] flex md:flex-row flex-col pb-5 sm:pb-10 md:pb-20">
-        <div className="w-full md:w-6/10 flex flex-col gap-3 order-2 md:order-1">
+      <div className="pt-[30%] sm:pt-[20%] md:pt-[20%] xl:pt-[15%] 2xl:pt-[10%] flex md:flex-row flex-col pb-5 sm:pb-10 md:pb-20">
+        <div
+          data-aos="zoom-in"
+          data-aos-duration="500"
+          className="w-full md:w-6/10 flex flex-col gap-3 order-2 md:order-1"
+        >
           <h2 className="masked-text font-varsity text-primary py-10 md:py-0">
             MR ZEYTOUN HIGH PERFORMANCE MATTE CLAY
           </h2>

@@ -4,7 +4,7 @@ import { Icon } from "@iconify/react";
 import { useState } from "react";
 
 export default function Accordion() {
-  const [openIndex, setOpenIndex] = useState(null);
+  const [openIndex, setOpenIndex] = useState(0);
 
   const faqs = [
     {
@@ -76,7 +76,7 @@ export default function Accordion() {
                   : "max-h-0 opacity-0"
               }`}
             >
-              <p className="text-gray-600">{faq.answer}</p>
+              <p className="text-gray-600 font-normal">{faq.answer}</p>
             </div>
           )}
         </div>

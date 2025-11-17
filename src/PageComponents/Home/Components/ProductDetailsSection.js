@@ -49,7 +49,7 @@ export default function ProductDetailsSection() {
       setCurrentHeight(backGroundRef.current.offsetHeight);
       // console.log(backGroundRef.current.offsetHeight, backGroundRef.current.offsetWidth)
     }
-    if (window.innerWidth > 768) {
+    if (window.innerWidth >= 769) {
       setIsWide(true);
     }
     // Set animation type based on screen size
@@ -69,7 +69,7 @@ export default function ProductDetailsSection() {
         <div
           className="absolute top-0 left-0 w-full h-full bg-black"
           style={
-            isWide && window.innerWidth > 768
+            isWide && window.innerWidth >= 769
               ? {
                   clipPath: `path("M 0 0 L ${(currentWidth / 100) * 30} 0 L ${
                     (currentWidth / 100) * 30

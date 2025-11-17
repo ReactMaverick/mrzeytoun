@@ -105,15 +105,15 @@ export default function PromiseSection() {
 
           {/* Main Content */}
           <div className="relative">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12 items-center">
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12 items-center">
               {/* Left Features */}
-              <div className="space-y-5 md:space-y-25 z-2">
+              <div className="space-y-5 lg:space-y-25 z-2 pr-[10px] md:pr-0">
                 {leftFeatures.map((feature, index) => (
                   <div
                     data-aos="fade-right"
                     data-aos-duration="500"
                     style={
-                      index !== 1 && isWide && window.innerWidth > 768
+                      index !== 1 && isWide && window.innerWidth > 1024
                         ? {
                             transform: "translateX(10%)",
                           }
@@ -139,9 +139,9 @@ export default function PromiseSection() {
 
               {/* Center Image with Dashed Circles */}
               <div className="relative flex items-center justify-center">
-                <div className="relative w-64 h-64 md:w-80 md:h-80">
+                <div className="relative w-64 h-64 lg:w-80 lg:h-80">
                   {/* Outer Dashed Circle - Black */}
-                  <div className="-z hidden md:block absolute top-[50%] left-[50%] transform -translate-x-1/2 -translate-y-1/2 h-[130%] w-[130%] rounded-full border-2 border-dashed border-gray-400"></div>
+                  <div className="-z hidden lg:block absolute top-[50%] left-[50%] transform -translate-x-1/2 -translate-y-1/2 h-[130%] w-[130%] rounded-full border-2 border-dashed border-gray-400"></div>
                   <div
                     className="-z absolute top-[50%] left-[50%] transform -translate-x-1/2 -translate-y-1/2 rounded-full border-2 border-dashed border-gray-400"
                     style={{
@@ -155,7 +155,7 @@ export default function PromiseSection() {
                   />
                   {/* Product Image */}
                   <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="relative w-48 h-48 md:w-56 md:h-56">
+                    <div className="relative w-48 h-48 lg:w-56 lg:h-56">
                       <Image
                         ref={imageRef}
                         src="/images/hero-section.png"
@@ -169,13 +169,13 @@ export default function PromiseSection() {
               </div>
 
               {/* Right Features */}
-              <div className="space-y-5 md:space-y-25 order-3">
+              <div className="space-y-5 lg:space-y-25 order-3 pl-[10px] md:pl-0">
                 {rightFeatures.map((feature, index) => (
                   <div
                     data-aos="fade-left"
                     data-aos-duration="500"
                     style={
-                      index !== 1 && isWide && window.innerWidth > 768
+                      index !== 1 && isWide && window.innerWidth > 1024
                         ? {
                             transform: "translateX(-10%)",
                           }
@@ -191,7 +191,7 @@ export default function PromiseSection() {
                       />
                     </div>
                     <div className="flex-1 bg-black p-3 rounded-full">
-                      <p className="text-sm md:text-base pl-6 text-nowrap">
+                      <p className="text-sm lg:text-base pl-6">
                         {feature.title}
                       </p>
                     </div>
