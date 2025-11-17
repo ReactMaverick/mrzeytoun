@@ -147,7 +147,7 @@ export default function UserReatingSection() {
             <button
               onClick={handlePrev}
               disabled={currentIndex === 0}
-              className="w-10 md:w-15 h-10 md:h-15 rounded-full border-2 border-gray-300 flex items-center justify-center hover:border-black hover:bg-black hover:text-white transition-all duration-300 disabled:opacity-30 disabled:cursor-not-allowed disabled:hover:border-gray-300 disabled:hover:bg-transparent disabled:hover:text-black"
+              className="w-10 md:w-15 h-10 md:h-15 rounded-full border-2 border-gray-300 flex items-center justify-center hover:border-black hover:bg-black hover:text-white transition-all duration-300 disabled:opacity-30 disabled:cursor-not-allowed disabled:hover:border-gray-300 disabled:hover:bg-transparent disabled:hover:text-black cursor-pointer"
               aria-label="Previous testimonials"
             >
               <Icon
@@ -158,7 +158,7 @@ export default function UserReatingSection() {
             <button
               onClick={handleNext}
               disabled={currentIndex === maxIndex}
-              className="w-10 md:w-15 h-10 md:h-15 rounded-full border-2 border-gray-300 flex items-center justify-center hover:border-black hover:bg-black hover:text-white transition-all duration-300 disabled:opacity-30 disabled:cursor-not-allowed disabled:hover:border-gray-300 disabled:hover:bg-transparent disabled:hover:text-black"
+              className="w-10 md:w-15 h-10 md:h-15 rounded-full border-2 border-gray-300 flex items-center justify-center hover:border-black hover:bg-black hover:text-white transition-all duration-300 disabled:opacity-30 disabled:cursor-not-allowed disabled:hover:border-gray-300 disabled:hover:bg-transparent disabled:hover:text-black cursor-pointer"
               aria-label="Next testimonials"
             >
               <Icon
