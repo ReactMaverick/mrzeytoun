@@ -1,7 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   basePath: "/mrzeytoun",
-  // other config options here
+  assetPrefix: "/mrzeytoun/",
+  trailingSlash: true,
 };
 
 export default nextConfig;
