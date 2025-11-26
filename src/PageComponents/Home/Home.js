@@ -7,13 +7,14 @@ import ProductDetailsSection from './Components/ProductDetailsSection'
 import InstrectionSection from './Components/InstrectionSection'
 import UserReatingSection from './Components/UserReatingSection'
 import FooterBanner from './Components/FooterBanner'
+import Image from 'next/image'
 
 export default function Home() {
     return (
         <>
             <section className='relative overflow-hidden'>
-                <img className='absolute -z-1 lg:w-7/10 xl:h-full xl:w-6/10 lg:h-full h-full w-full opacity-20' src={HERO_BACKGROUND_LAYER} alt="background layer" />
-                <img className='absolute -z-1 lg:w-3/10 xl:h-auto xl:w-4/10 lg:h-auto h-[30%] w-full md:w-auto md:h-full hero-dark-right-bg' src={HERO_BACKGROUND} alt="background" />
+                <Image className='absolute -z-1 lg:w-7/10 xl:h-full xl:w-6/10 lg:h-full h-full w-full opacity-20' src={HERO_BACKGROUND_LAYER} alt="background layer" width={3000} height={1860} />
+                <Image className='absolute -z-1 lg:w-3/10 xl:h-auto xl:w-4/10 lg:h-auto h-[30%] w-full md:w-auto md:h-full hero-dark-right-bg' src={HERO_BACKGROUND} alt="background" width={996} height={1860} />
                 <HeroSection />
             </section>
             <PromiseSection />

@@ -6,6 +6,7 @@ import {
   HERO_SECTION_IMAGE,
 } from "@/Constant/image";
 import { Icon } from "@iconify/react";
+import Image from "next/image";
 import { useRouter } from "next/navigation";
 import React from "react";
 
@@ -54,12 +55,14 @@ export default function HeroSection() {
         </div>
         <div className="w-full md:w-3/10  order-1 md:order-2 flex md:block justify-center">
           <div className="relative w-2/4 md:w-full">
-            <img
+            <Image
               data-aos="zoom-in"
               data-aos-duration="500"
               className="w-full bg-white p-5 rounded-full"
               src={HERO_SECTION_IMAGE}
               alt="hero section image"
+              width={1035}
+              height={1012}
             />
             <div className="absolute -top-[5%] -left-[5%] h-[110%] w-[110%] rounded-full border-2 border-dashed border-gray-400" />
             <span className="absolute px-3 py-1 rounded-full bg-white border border-gray-500 font-medium">
