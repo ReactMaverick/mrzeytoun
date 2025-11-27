@@ -2,6 +2,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { Icon } from "@iconify/react";
+import { HERO_SECTION_IMAGE } from "@/Constant/image";
 
 export default function PromiseSection() {
   const backGroundRef = useRef();
@@ -158,7 +159,7 @@ export default function PromiseSection() {
                     <div className="relative w-48 h-48 lg:w-56 lg:h-56">
                       <Image
                         ref={imageRef}
-                        src="/images/hero-section.png"
+                        src={HERO_SECTION_IMAGE}
                         alt="Mr Zeytoun Product"
                         fill
                         className="object-contain"
